@@ -1,0 +1,331 @@
+@font-face {
+  font-family: "UniSans";
+  font-display: swap;
+  src: url("../fonts/unisansheavycaps.woff") format("woff"), url("../fonts/unisansheavycaps.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Play";
+  font-display: swap;
+  src: url("../fonts/Play-Bold.woff") format("woff"), url("../fonts/Play-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  font-display: swap;
+  src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  font-display: swap;
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+._container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: url("../img/icons/header/bg_header.jpg") top no-repeat;
+}
+
+.top-header__content {
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+.top-header__column {
+  flex: 0 1 50%;
+}
+
+.top-header__column_logo {
+  align-self: flex-start;
+  flex: 0 0 190px;
+  padding: 25px 0 0 0;
+  text-align: center;
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: 110px 130px 180px;
+}
+
+.menu__list li {
+  margin: 1px 0;
+}
+
+@media (max-width: 1192px) {
+  .menu__list {
+    grid-template-columns: 90px 110px 160px;
+  }
+}
+
+.menu__link {
+  font-family: "Play";
+  font-size: 14px;
+  min-height: 27px;
+  text-decoration: underline;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 22px;
+}
+
+@media (min-width: 991.98px) {
+  .menu__link:hover {
+    border-radius: 20px;
+    background-color: #068292;
+  }
+}
+
+@media (max-width: 1192px) {
+  .menu__link {
+    padding: 5px 10px;
+  }
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-header__column {
+  padding: 0 30px;
+  border-right: 1px solid #ffffff;
+}
+
+.contacts-header__column:last-child {
+  border: 0;
+}
+
+@media (max-width: 1192px) {
+  .contacts-header__column {
+    padding: 0 15px;
+  }
+}
+
+.contacts-header__item_icon {
+  background: url("../img/icons/header/phone.png") left no-repeat;
+  padding: 0 0 0 37px;
+}
+
+@media (max-width: 1192px) {
+  .contacts-header__item_icon {
+    padding: 0 0 0 25px;
+    background-size: 15px;
+  }
+}
+
+.contacts-header__label {
+  font-family: "Roboto-Light";
+  font-size: 12px;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+.contacts-header__phone {
+  font-family: "Roboto-Bold";
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 1192px) {
+  .contacts-header__phone {
+    font-size: 16px;
+  }
+}
+
+.bottom-header {
+  font-family: "Roboto-Light";
+}
+
+.bottom-header__container {
+  display: flex;
+  height: 63px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-header__column {
+  flex: 0 1 calc(50%-95px);
+}
+
+.actions-header {
+  display: flex;
+  align-items: center;
+}
+
+.actions-header li {
+  margin: 0 50px 0 0;
+}
+
+@media (max-width: 1180px) {
+  .actions-header li {
+    margin: 0 2.54237vw 0 0;
+  }
+}
+
+.actions-header__item {
+  padding: 0 0 0 36px;
+  display: inline-block;
+  line-height: 24px;
+  color: #999999;
+}
+
+.actions-header__item span {
+  border-bottom: 1px dotted;
+}
+
+@media (max-width: 1192px) {
+  .actions-header__item {
+    padding: 0 0 0 30px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .actions-header__item:hover {
+    color: #1ab9ce;
+  }
+}
+
+.actions-header__item_login {
+  background: url("../img/icons/header/login.png") left no-repeat;
+}
+
+.actions-header__item_reg {
+  background: url("../img/icons/header/user.png") left no-repeat;
+}
+
+.actions-header__item_email {
+  background: url("../img/icons/header/mail.png") left no-repeat;
+  line-height: 13px;
+}
+
+.actions-header__item_email span {
+  border-bottom: 1px solid;
+}
+
+.info-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-header__column {
+  padding: 0 50px 0 0;
+}
+
+@media (max-width: 1180px) {
+  .info-header__column {
+    padding: 0 2.54237vw 0 0;
+  }
+}
+
+.info-header__column:last-child {
+  padding: 0;
+}
+
+.info-header__callback {
+  padding: 0 0 0 32px;
+  background: url("../img/icons/header/callback.png") left no-repeat;
+  display: inline-block;
+  line-height: 20px;
+  color: #1ab9ce;
+}
+
+.info-header__callback span {
+  border-bottom: 1px dotted;
+}
+
+.info-header__schedule {
+  padding: 0 0 0 37px;
+  background: url("../img/icons/header/schedule.png") left no-repeat;
+  font-family: "Roboto-Light";
+  font-weight: 300;
+  font-size: 12px;
+  color: #999999;
+}
+
+.info-header__schedule span {
+  font-weight: 900;
+}
+
+@media (max-width: 1192px) {
+  .info-header__schedule {
+    background: none;
+    padding: 0;
+  }
+}
+
+.info-header__cart {
+  width: 43px;
+  height: 43px;
+  background: url("../img/icons/header/cart.png") 0 0 no-repeat;
+  position: relative;
+}
+
+.info-header__cart span {
+  position: absolute;
+  padding: 0 11px;
+  line-height: 25px;
+  font-family: "Roboto-Bold";
+  background-color: #f68038;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 15px;
+  top: -3px;
+  right: -15px;
+}
+
+@media (max-width: 1192px) {
+  .info-header__cart span {
+    right: -10px;
+  }
+}
