@@ -35,7 +35,7 @@
           <a href="#" class="top-header__logo"><img src="img/logo.png" alt=""></a>
         </div>
         <div class="top-header__column">
-          <div class="top-header__contacts contacts-header">
+          <div class="top-header__contacts contacts-header contacts-header_forCart">
             <div class="contacts-header__column">
               <div class="contacts-header__item contacts-header__item_icon">
                 <div class="contacts-header__label">Санкт-Петербург</div>
@@ -55,7 +55,7 @@
     <div class="header__bottom bottom-header">
       <div class="bottom-header__container _container">
         <div class="bottom-header__column">
-          <ul class="bottom-header__actions actions-header">
+          <ul data-da="menu__body,0,640" class="bottom-header__actions actions-header">
             <li>
               <a href="" class="actions-header__item actions-header__item_login"><span>Вход</span></a>
             </li>
@@ -70,7 +70,7 @@
         </div>
         <div class="bottom-header__column">
           <div class="bottom-header__info info-header">
-            <div class="info-header__column">
+            <div data-da="menu__body,2,640" class="info-header__column">
               <a href="" class="info-header__callback"><span>Обратный звонок</span></a>
             </div>
             <div class="info-header__column">
@@ -80,7 +80,7 @@
               </div>
             </div>
             <div class="info-header__column">
-              <div class="info-header__cart">
+              <div data-da="contacts-header_forCart,1,640" class="info-header__cart">
                 <span>12</span>
               </div>
             </div>
@@ -90,6 +90,7 @@
     </div>
   </header>
   <script src="js/script.js"></script>
+  <script src="js/dynamic_adapt.js"></script>
 </body>
 
 </html>
