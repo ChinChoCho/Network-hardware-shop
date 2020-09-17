@@ -1,5 +1,6 @@
 .header {
   background: url("../img/icons/header/bg_header.jpg") top no-repeat;
+  padding: 0 0 10px 0;
   // .header__top
   &__top {
   }
@@ -68,7 +69,7 @@
   &__body {
     @media (max-width: $md2+px) {
       opacity: 0;
-      transition: all 0.3s ease 0s;
+      transition: opacity 0.3s ease 0s;
       position: fixed;
       height: 100%;
       width: 100%;
