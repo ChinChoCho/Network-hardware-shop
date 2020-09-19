@@ -1,14 +1,17 @@
 .header {
-  background: url("../img/icons/header/bg_header.jpg") top no-repeat;
-  padding: 0 0 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background: #fff url("../img/icons/header/bg_header.jpg") top no-repeat;
   // .header__top
   &__top {
   }
   // .header__bottom
   &__bottom {
+    //background-color: #fff;
   }
   @media (max-width: $md3+px) {
-    background: url("../img/icons/header/bg_header.jpg") 0 -20px no-repeat;
+    background: #fff url("../img/icons/header/bg_header.jpg") 0 -20px no-repeat;
   }
 }
 .top-header {
@@ -269,9 +272,11 @@
   // .bottom-header__container
   &__container {
     display: flex;
-    height: 63px;
     align-items: center;
     justify-content: space-between;
+    @media (min-width: 640px) {
+      height: 63px;
+    }
   }
   // .bottom-header__column
   &__column {
