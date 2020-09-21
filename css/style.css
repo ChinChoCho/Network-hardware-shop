@@ -691,11 +691,11 @@ a {
   display: none;
 }
 
-.menu-page__list > li {
+.menu-page__list li {
   border-bottom: 1px solid #1aa7b9;
 }
 
-.menu-page__list > li:last-child {
+.menu-page__list li:last-child {
   border-bottom: none;
 }
 
@@ -782,14 +782,14 @@ a {
   font-family: "Roboto-Light";
   font-size: 12px;
   letter-spacing: 0.3px;
-  color: #1ab9ce;
+  color: #fff;
   padding: 10px 40px;
-  background-color: #fff;
+  background-color: #07bbd3;
 }
 
 @media (min-width: 991.98px) {
   .submenu-page__link:hover {
-    background-color: #71c7d3;
+    background-color: #098494;
     color: #fff;
   }
 }
