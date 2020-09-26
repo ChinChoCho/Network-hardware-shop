@@ -9,11 +9,10 @@
 
 function add_toggle_element(elementClass, elementsArray, toggleClass) {
    let element = document.querySelector("." + elementClass);
-   element.addEventListener("click", function (e) {
+   element.addEventListener("click", function () {
       for (let i = 0; i < elementsArray.length; i++) {
          let element = document.querySelector("." + elementsArray[i]);
          element.classList.toggle(toggleClass);
-         e.preventDefault();
       }
    });
 }
@@ -126,6 +125,13 @@ else {
 
 add_toggle_element("icon-menu", ["icon-menu", "menu__body"], "_active");
 add_toggle_element("menu-page__burger", ["menu-page__lines", "menu-page__body"], "_active");
+let burger = document.querySelector(".menu-page__burger");
+burger.addEventListener("click", function () {
+   for (let i = 0; i < elements.length; i++) {
+      elements[i].classList.remove("_active");
+   }
+});
+
 
 //add_hover_elements("menu-page__link_parent", "_active");
 
