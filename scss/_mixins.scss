@@ -7,3 +7,16 @@
     font-style: #{$style};
   }
 }
+
+@mixin calculateItems($item_width) {
+  $cols: floor(100%/$item_width);
+  $interval: (100 - ($cols * $item_width))/($cols - 1);
+  flex: 0 1 $item_width;
+  margin-right: $interval;
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+  &:last-child {
+    margin-right: auto;
+  }
+}

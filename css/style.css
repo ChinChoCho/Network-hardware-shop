@@ -598,7 +598,7 @@ a {
 }
 
 .page__side {
-  flex: 0 0 260px;
+  flex: 0 0 20%;
 }
 
 @media (max-width: 991.98px) {
@@ -622,17 +622,19 @@ a {
 .menu-page__header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
 }
 
 .menu-page__title {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   color: #fff;
   font-family: UniSans;
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.75px;
   line-height: 116.66667%;
+  margin-right: 20px;
 }
 
 .menu-page__burger {
@@ -819,37 +821,70 @@ a {
 
 .products__items {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .items-products {
+  width: 100%;
   margin: 20px 0 0 0;
 }
 
 .item-product {
-  flex: 0 1 25%;
   position: relative;
+  margin-bottom: 80px;
+  flex: 0 1 24%;
+  margin-right: 1.33333%;
+}
+
+.item-product:nth-child(4n) {
+  margin-right: 0;
+}
+
+.item-product:last-child {
+  margin-right: auto;
+}
+
+@media (max-width: 1180px) {
+  .item-product {
+    flex: 0 1 26%;
+    margin-right: 11%;
+  }
+  .item-product:nth-child(3n) {
+    margin-right: 0;
+  }
+  .item-product:last-child {
+    margin-right: auto;
+  }
 }
 
 .item-product__wrapper {
-  border: 1px solid #000;
-  border-radius: 10px;
   padding: 20px;
 }
 
 .item-product__image-wrapper {
   position: relative;
   width: 100%;
-  height: auto;
+  max-width: 170px;
+  height: 170px;
+  margin: auto;
 }
 
 .item-product__stickers {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .item-product__image {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }
 
 .item-product__counter {
@@ -859,6 +894,17 @@ a {
   top: 100%;
   transform: translateY(-10px);
   visibility: hidden;
+}
+
+.item-product:hover {
+  z-index: 1;
+}
+
+.item-product:hover .item-product__wrapper {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.05);
+  padding: 19px;
 }
 
 .item-product:hover .info-product__description {
@@ -871,8 +917,18 @@ a {
 }
 
 .item-product:hover .counter__wrapper {
-  padding: 20px 0 20px 0;
-  transform: translateY(-20px);
+  border: 1px solid #ddd;
+  border-top: none;
+  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.05);
+  transform: translateY(0px);
+}
+
+.item-product:hover .counter__block {
+  margin-left: -1px;
+}
+
+.item-product:hover .counter__button {
+  margin-right: -1px;
 }
 
 .sticker {
@@ -887,11 +943,13 @@ a {
 }
 
 .info-product__text {
+  height: 94px;
   position: relative;
 }
 
 .info-product__title {
   color: #0a5221;
+  word-wrap: break-word;
 }
 
 .info-product__description {
@@ -959,7 +1017,7 @@ a {
 
 .counter__block {
   box-sizing: content-box;
-  border: 1px solid #858585;
+  border: 1px solid #bbb;
   font-size: 0;
   display: inline-block;
   border-radius: 2px;
@@ -969,27 +1027,25 @@ a {
 }
 
 .counter__wrapper {
-  border: 1px solid #000;
-  border-top: none;
-  border-radius: 0 0 10px 10px;
   visibility: visible;
-  transform: translateY(-100%);
-  transition: 0.3s ease 0s;
+  transform: translateY(-100%) translateY(10px);
+  transition: transform 0.2s ease 0s;
   z-index: 4;
   display: flex;
-  padding: 20px 0 20px 0;
-  margin: 10px 0 0 0;
+  padding: 10px 19px 19px 19px;
+  border-color: #ddd;
+  border-radius: 0 0 10px 10px;
   background-color: #fff;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .counter__text {
   width: 32px;
   border: 0;
-  border-left: 1px solid #858585;
-  border-right: 1px solid #858585;
-  background: #e7e7e7;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  background: #eee;
   color: #000;
   font-size: 13px;
   height: 100%;
@@ -1031,7 +1087,7 @@ a {
 }
 
 .counter__plus:hover, .counter__minus:hover {
-  background: #c3c3c3;
+  background: #ddd;
 }
 
 .counter__minus:before {
@@ -1047,7 +1103,7 @@ a {
 .counter__button {
   background-color: #fff;
   border-radius: 10px;
-  border: 2px solid #444;
+  border: 2px solid #777;
   padding: 4px 5px 1px 5px;
   cursor: pointer;
 }
@@ -1055,7 +1111,7 @@ a {
 .counter__button_cart {
   width: 35px;
   height: 35px;
-  fill: #444;
+  fill: #777;
 }
 
 .counter__button:hover {
