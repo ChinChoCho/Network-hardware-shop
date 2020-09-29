@@ -14,6 +14,7 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+
 ._container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
@@ -48,6 +49,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+body._active {
+  overflow: hidden;  // Нужно ещё доделать правый паддинг при открытии меню и модальных окон
 }
 
 @import "header";
@@ -283,6 +288,9 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 42 / 36 * 100%;
+    @media (max-width: $md2+px) {
+      text-align: center;
+    }
   }
   // .products__items
   &__items {
@@ -297,10 +305,17 @@ a {
 
 .item-product {
   position: relative;
+  min-width: 210px;
   margin-bottom: 80px;
   @include calculateItems(24%);
-  @media (max-width: $maxWidthContainer+px) {
-    @include calculateItems(26%);
+  @media (max-width: $md1+px) {
+    @include calculateItems(32%, 1%);
+  }
+  @media (max-width: $md3+px) {
+    @include calculateItems(48%, 1%);
+  }
+  @media (max-width: $md4+px) {
+    @include calculateItems(76%, 12%);
   }
   // .item-product__wrapper
   &__wrapper {
@@ -344,7 +359,7 @@ a {
     transform: translateY(-10px);
     visibility: hidden;
   }
-  &:hover {
+  &._active {
     z-index: 1;
     .item-product__wrapper{
       border: 1px solid #ddd;
@@ -354,8 +369,10 @@ a {
     }
     .info-product {
       &__description {
-        transition: 0.5s ease 1s;
-        visibility: visible;
+        @media (min-width: $md2+px) {
+          transition: 0s ease 1s;
+          visibility: visible;
+        }
       }
       &__counter {
         visibility: visible;

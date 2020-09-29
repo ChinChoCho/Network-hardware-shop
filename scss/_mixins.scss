@@ -8,15 +8,19 @@
   }
 }
 
-@mixin calculateItems($item_width) {
-  $cols: floor(100%/$item_width);
-  $interval: (100 - ($cols * $item_width))/($cols - 1);
+@mixin calculateItems($item_width, $padding: 0%) {
+  $true_width: 100% - 2*$padding;
+  $cols: floor($true_width/$item_width);
+  $interval: ($true_width - $cols * $item_width)/($cols - 1);
   flex: 0 1 $item_width;
-  margin-right: $interval;
-  &:nth-child(#{$cols}n) {
-    margin-right: 0;
+  &:nth-child(n) {
+    margin-right: $interval;
+    margin-left: 0;
   }
-  &:last-child {
-    margin-right: auto;
+  &:nth-child(#{$cols}n) {
+    margin-right: $padding;
+  }
+  &:nth-child(#{$cols}n + 1) {
+    margin-left: $padding;
   }
 }

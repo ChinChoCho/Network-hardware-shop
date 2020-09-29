@@ -42,7 +42,7 @@ function add_toggle_element(elementClass, elementsArray, toggleClass) {
 // }
 
 function isMobile() {
-   let width = document.body.clientWidth;
+   let width = window.innerWidth;
    if (width < 992) {
       return true;
    }
@@ -101,7 +101,7 @@ let timerId = setInterval(function () {
    currentDevice = isMobile();
 }, 500);
 
-let elements = document.querySelectorAll(".menu-page__link_parent");
+let elements = document.querySelectorAll(".menu-page__link_parent"); // Доделать скрытие открытого меню при уменьшении экрана
 let childElements = document.querySelectorAll(".menu-page__link_parent > a");
 
 if (isMobile()) {
@@ -123,7 +123,7 @@ else {
    }
 }
 
-add_toggle_element("icon-menu", ["icon-menu", "menu__body"], "_active");
+add_toggle_element("icon-menu", ["icon-menu", "menu__body", "body"], "_active");
 add_toggle_element("menu-page__burger", ["menu-page__lines", "menu-page__body"], "_active");
 let burger = document.querySelector(".menu-page__burger");
 burger.addEventListener("click", function () {
