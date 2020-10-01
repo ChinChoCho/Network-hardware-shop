@@ -58,7 +58,9 @@
   }
 }
 
-*, :before, :after {
+*,
+:before,
+:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -720,7 +722,7 @@ body._active {
 }
 
 .menu-page__link_parent .menu-page__link::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 10px;
   top: 50%;
@@ -802,6 +804,7 @@ body._active {
   font-size: 12px;
   letter-spacing: 0.3px;
   color: #fff;
+  white-space: nowrap;
   padding: 10px 40px;
   background-color: #07bbd3;
 }

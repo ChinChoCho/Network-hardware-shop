@@ -14,7 +14,6 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-
 ._container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
@@ -29,13 +28,15 @@ $md4: 479.98;
   //   padding: 0 10px;
   // }
   padding: 0px 20px;
-  @media (max-width: $md4+px){
+  @media (max-width: $md4+px) {
     padding: 0px 10px;
   }
 }
 
 //Обнуление, общие параметры
-*,:before,:after {
+*,
+:before,
+:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,7 +53,7 @@ a {
 }
 
 body._active {
-  overflow: hidden;  // Нужно ещё доделать правый паддинг при открытии меню и модальных окон
+  overflow: hidden; // Нужно ещё доделать правый паддинг при открытии меню и модальных окон
 }
 
 @import "header";
@@ -62,22 +63,22 @@ body._active {
 .page {
   padding: 163px 0 0 0;
   flex: 1 1 auto;
-  @media (max-width: $md3+px){
+  @media (max-width: $md3+px) {
     padding: 143px 0 0 0;
   }
-  @media (max-width: 640px){
+  @media (max-width: 640px) {
     padding: 80px 0 0 0;
   }
   // .page__container
   &__container {
-    @media (min-width: $md2+px){
+    @media (min-width: $md2+px) {
       display: flex;
     }
   }
   // .page__side
   &__side {
     flex: 0 0 20%;
-    @media (max-width: $md2+px){
+    @media (max-width: $md2+px) {
       margin: 0 0 30px 0;
     }
   }
@@ -86,7 +87,7 @@ body._active {
   }
   // .page__content
   &__content {
-    @media (min-width: $md2+px){
+    @media (min-width: $md2+px) {
       flex: 1 1 auto;
       padding: 0 0 0 30px;
     }
@@ -188,7 +189,7 @@ body._active {
       position: relative;
       .menu-page__link {
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           right: 10px;
           top: 50%;
@@ -265,12 +266,13 @@ body._active {
     font-family: "Roboto-Light";
     font-size: 12px;
     letter-spacing: 0.3px;
-    color: #fff;  //#1ab9ce;
+    color: #fff; //#1ab9ce;
+    white-space: nowrap;
     padding: 10px 40px;
     background-color: #07bbd3;
     @media (min-width: $md2+px) {
       &:hover {
-        background-color: #098494;   //#71c7d3;
+        background-color: #098494; //#71c7d3;
         color: #fff;
       }
     }
@@ -338,7 +340,7 @@ body._active {
   }
   // .item-product__image
   &__image {
-    position: absolute;     //Выравнивание по центру враппера
+    position: absolute; //Выравнивание по центру враппера
     top: 0;
     left: 0;
     right: 0;
@@ -361,10 +363,10 @@ body._active {
   }
   &._active {
     z-index: 1;
-    .item-product__wrapper{
+    .item-product__wrapper {
       border: 1px solid #ddd;
       border-radius: 10px;
-      box-shadow: 0 2px 20px 1px rgba(0,0,0,.05);
+      box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.05);
       padding: 19px;
     }
     .info-product {
@@ -382,7 +384,7 @@ body._active {
       &__wrapper {
         border: 1px solid #ddd;
         border-top: none;
-        box-shadow: 0 2px 20px 1px rgba(0,0,0,.05);
+        box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.05);
         transform: translateY(0px);
       }
       &__block {
@@ -463,7 +465,7 @@ body._active {
   // .existence_true
   &_true {
     span {
-      font-size: 12px;  
+      font-size: 12px;
       color: #348c4f;
     }
   }
@@ -530,7 +532,7 @@ body._active {
     line-height: 13px;
     padding: 8px 8px 7px;
     -moz-appearance: textfield;
-    &::-webkit-inner-spin-button { 
+    &::-webkit-inner-spin-button {
       display: none;
     }
     &:focus {
@@ -553,7 +555,7 @@ body._active {
       content: "";
       left: 50%;
       top: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       height: 10px;
       width: 10px;
     }
